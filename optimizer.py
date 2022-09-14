@@ -9,6 +9,7 @@ class Optimizer:
     def __init__(self, _type: str, coin: str):
         self.df: DataFrame = pd.DataFrame
         self.results: DataFrame = pd.DataFrame
+        self.tears: DataFrame = pd.DataFrame
         self._type: str = _type
         self._coin: str = coin
         self._input_step_size: int = 1

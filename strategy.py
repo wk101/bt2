@@ -67,6 +67,7 @@ class EMASentiment:
         self._calculate_returns()
         self._calculate_cum_returns()
         self._store_performance_in_dataframe()
+        self._store_tears_in_dataframe
 
         # TODO: cost of trades should be about 5 basis points Pyfolio input
 
@@ -215,7 +216,7 @@ class EMASentiment:
         df = self.df
         df['buy_and_hold'] = df['Returns'].cumsum()
         df = df.dropna()
-        df.to_csv(f'data/cum_results_{self._coin}_{self._ema_days}.csv')
+        df.to_csv(f'data/buy_and_hold_results_{self._coin}_{self._ema_days}.csv')
         self.df = df
 
     def _store_performance_in_dataframe(self):

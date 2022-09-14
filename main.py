@@ -32,6 +32,7 @@ def main():
             logger.info(f'optimized results for {coin}')
 
     r.to_csv('Results.csv')
+    t.to_csv('Tears.csv')
     pass
 
 
